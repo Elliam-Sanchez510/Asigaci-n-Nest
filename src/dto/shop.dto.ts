@@ -1,5 +1,5 @@
 import { IsString } from "class-validator";
-import { IsNotEmpty, MinLength, IsNumber } from "class-validator/types/decorator/decorators";
+import { IsNotEmpty, MinLength, IsNumber, IsOptional } from "class-validator/types/decorator/decorators";
 
 export class CreateProductDto{
     @IsString()
@@ -9,22 +9,27 @@ export class CreateProductDto{
 
     @IsNumber()
     @IsNotEmpty()
+    @IsOptional()
     price: number;
 
     @IsString()
     @IsNotEmpty()
     @MinLength(15)
+    @IsOptional()
     description: string;
 
     @IsString()
     @IsNotEmpty()
+    @IsOptional()
     slug: string;
 
     @IsNumber()
     @IsNotEmpty()
+    @IsOptional()
     stock: 0;
 
     @IsString()
     @IsNotEmpty()
+    @IsOptional()
     gender: string;
 }

@@ -7,4 +7,4 @@ import { Product } from '../entities/shop.entity';
     controllers: [],
     providers: []
 })
-export class ProductsModule {}
+export class ShopModule {}
